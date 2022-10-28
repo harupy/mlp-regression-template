@@ -17,7 +17,7 @@ from typing import Dict
 from pandas import DataFrame
 
 
-def get_custom_metrics(
+def custom_metric(
     eval_df: DataFrame,
     builtin_metrics: Dict[str, int],  # pylint: disable=unused-argument
 ) -> Dict[str, int]:
@@ -31,9 +31,7 @@ def get_custom_metrics(
                             metrics and the values are the scalar values of the metrics. For more
                             information, see
                             https://mlflow.org/docs/latest/python_api/mlflow.html#mlflow.evaluate.
-    :return: A single-entry dictionary containing the custom metrics. The key is the metric name
-             and the value is the scalar metric value. Note that custom metric functions can
-             return dictionaries with multiple metric entries as well.
+    :return: A scalar metric value.
     """
     # FIXME::OPTIONAL: implement custom metrics calculation here.
 
